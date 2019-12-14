@@ -3,6 +3,7 @@
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
+    font-size: $default-font-size;
     padding: 1.5rem 4rem;
     display: inline-block;
     border-radius: 10rem;
@@ -41,12 +42,19 @@
       background-color: $color-white;
     }
   }
+
+  &--blue {
+    background-color: $color-primary;
+    color: $color-white;
+    &::after {
+      background-color: $color-white;
+    }
+  }
 }
 
 .btn-text {
   &:link,
   &:visited {
-    font-size: $default-font-size;
     color: $color-primary;
     display: inline-block;
     text-decoration: none;
