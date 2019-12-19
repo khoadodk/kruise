@@ -10,6 +10,13 @@
 }
 .u-margin-bottom-big {
   margin-bottom: 8rem !important;
+
+  @include responsive(phone) {
+    margin-bottom: 3rem !important;
+  }
+  @include responsive(tab-port) {
+    margin-bottom: 4rem !important;
+  }
 }
 
 .u-margin-top-small {

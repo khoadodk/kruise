@@ -4,6 +4,16 @@ body {
   line-height: 1.7;
   color: $color-grey-dark;
   padding: 3rem;
+
+  @include responsive(phone) {
+    padding: 0rem;
+  }
+  @include responsive(tab-port) {
+    padding: 0rem;
+  }
+  @include responsive(tab-pland) {
+    padding: 0rem;
+  }
 }
 
 .heading-primary {
@@ -20,6 +30,23 @@ body {
     animation: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+    margin-bottom: 2rem;
+
+    @include responsive(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+      font-weight: 600;
+    }
+    @include responsive(tab-port) {
+      letter-spacing: 1rem;
+      font-size: 6rem;
+      font-weight: 600;
+    }
+    @include responsive(tab-land) {
+      letter-spacing: 1rem;
+      font-size: 6rem;
+      font-weight: 600;
+    }
   }
 
   &--sub {
@@ -30,6 +57,15 @@ body {
     animation: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+
+    @include responsive(phone) {
+      letter-spacing: 8px;
+      font-size: 2rem;
+    }
+    @include responsive(tab-land) {
+      letter-spacing: 8px;
+      font-size: 2rem;
+    }
   }
 
   &--btn {

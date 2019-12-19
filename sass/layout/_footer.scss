@@ -3,6 +3,10 @@
   padding: 8rem 0;
   font-size: 1.5rem;
 
+  @include responsive(phone) {
+    padding: 5rem 0;
+  }
+
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
@@ -17,6 +21,11 @@
     border-top: 1px solid $color-black;
     padding-top: 2rem;
     display: inline-block;
+
+    @include responsive(phone) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -54,5 +63,9 @@
     padding-top: 2rem;
     width: 70%;
     float: right;
+
+    @include responsive(phone) {
+      width: 50%;
+    }
   }
 }

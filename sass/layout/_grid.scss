@@ -4,6 +4,18 @@
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include responsive(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+  @include responsive(phone) {
+    max-width: 40rem;
+    padding: 2rem;
+  }
+  @include responsive(tab-port) {
+    max-width: 50rem;
+    padding: 3rem;
   }
 
   @include clearfix;
@@ -13,6 +25,23 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include responsive(phone) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+      @include responsive(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    //General rule for mobile: all columns are 100% width
+    @include responsive(phone) {
+      width: 100% !important;
+    }
+    @include responsive(tab-port) {
+      width: 100% !important;
     }
   }
 
