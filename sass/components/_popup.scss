@@ -32,6 +32,9 @@
       font-size: 4rem;
       transition: all 0.2s;
       line-height: 1;
+      @include responsive(phone) {
+        color: $color-white;
+      }
     }
     &:hover {
       color: $color-primary-light;
@@ -55,6 +58,11 @@
   &__left {
     width: 33.333333%;
     display: table-cell;
+
+    @include responsive(phone) {
+      display: inline-block;
+      width: 100%;
+    }
   }
 
   &__right {
@@ -62,11 +70,22 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include responsive(phone) {
+      display: inline-block;
+      width: 100%;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+    @include responsive(phone) {
+      width: 50%;
+      float: left;
+      border: 1px solid $color-black;
+      backface-visibility: hidden;
+    }
   }
 
   &__text {
